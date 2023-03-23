@@ -5,11 +5,13 @@ import CardGridTitle from '../components/CardGridTitle'
 
 export default function AllMonsters({navigation}) {
   return (
-    <FlatList data = {PosterMonsters}
-    keyExtractor={(item) => item.id}
-    renderItem={(itemData) => {
+    <FlatList data = {PosterMonsters} keyExtractor={(item) => item.id}
+      renderItem={(itemData) => {
       return(
-        <CardGridTitle title={itemData.item.title} onPress={() => navigation.navigate('DetailsMonsters')}/>
+        <CardGridTitle 
+        title={itemData.item.title}
+        image={itemData.item.image} 
+        onPress={() => navigation.navigate('DetailsMonsters')}/>
       )
     }}
     numColumns={3}/>
@@ -17,3 +19,4 @@ export default function AllMonsters({navigation}) {
 }
 
 const styles = StyleSheet.create({})
+
