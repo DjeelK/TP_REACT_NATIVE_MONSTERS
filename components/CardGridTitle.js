@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     title : {
         fontWeight : 'bold',
         fontSize : Platform.OS === 'android' ? 15 : 25,
-        color : '#F68BC7',
+        color : '#D7B0F8',
         bottom : 55
     },
     image : {

@@ -5,8 +5,8 @@ export const PosterMonsters = [
     new Card('p1','Alfred', require('../assets/images/MonstreA.jpg')),
     new Card('p2','Bilbo', require('../assets/images/MonstreB.jpg')),
     new Card('p3','Croquette',require('../assets/images/MonstreC.jpg')),
-    new Card('p4','Darius',require('../assets/images/MonstreD.jpg')),
-    new Card('p5','Elalicorne',require('../assets/images/MonstreE.jpg')),
+    new Card('p4','Dragibus',require('../assets/images/MonstreD.jpg')),
+    new Card('p5','Eli',require('../assets/images/MonstreE.jpg')),
     new Card('p6','Fophie',require('../assets/images/MonstreF.jpg')),
     new Card('p7','Gilda',require('../assets/images/MonstreG.jpg')),
     new Card('p8','Hector',require('../assets/images/MonstreH.jpg')),
@@ -28,7 +28,7 @@ export const PosterMonsters = [
     new Card('p23','Xochon',require('../assets/images/MonstreX.jpg')),
     new Card('p25','Yemi',require('../assets/images/MonstreY.jpg')),
     new Card('p26','Zelda',require('../assets/images/MonstreZ.jpg')),
-    new Card('p27','ArcEnCiel',require('../assets/images/Arcenciel.jpg'))
+    new Card('p27','Bonus',require('../assets/images/MonstreBONUS.jpg'))
 ];
 
 export const Monsters = [

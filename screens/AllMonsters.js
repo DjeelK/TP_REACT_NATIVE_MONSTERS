@@ -18,5 +18,7 @@ export default function AllMonsters({navigation}) {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  
+})
 
