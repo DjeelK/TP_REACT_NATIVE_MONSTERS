@@ -1,0 +1,70 @@
+import Card from "../classes/card";
+import Monster from "../classes/monster";
+
+export const PosterMonsters = [
+    new Card('p1','Alfred','../assets/images/.jpg'),
+    new Card('p2','Bilbo',''),
+    new Card('p3','Croquette',''),
+    new Card('p4','Darius',''),
+    new Card('p5','Elalicorne',''),
+    new Card('p6','Fophie',''),
+    new Card('p7','Gilda',''),
+    new Card('p8','Hector',''),
+    new Card('p9','Ijetaime',''),
+    new Card('p10','Joe',''),
+    new Card('p11','Kupedon',''),
+    new Card('p12','Lescargot',''),
+    new Card('p13','Mimolette',''),
+    new Card('p14','Navette',''),
+    new Card('p14','Olémain',''),
+    new Card('p15','Patrick',''),
+    new Card('p16','Qasper',''),
+    new Card('p17','Roulibre',''),
+    new Card('p18','Salsifie',''),
+    new Card('p19','Tactus',''),
+    new Card('p20','Uber',''),
+    new Card('p21','Vienparlà',''),
+    new Card('p22','Wanadoo',''),
+    new Card('p23','Xochon',''),
+    new Card('p25','Yemi',''),
+    new Card('p26','Zelda','')
+];
+
+export const Monsters = [
+    new Monster (
+        'm1',
+        '../assets/images/PagedaccueilOff.jpg',
+        'Alfred',
+        'Alfred est fait en moquette rose et sent bon la fraise tagada',
+        [
+            '../assets/crush/Brioche.jpg',
+            '../assets/crush/Arcenciel.jpg',
+            '../assets/crush/ChocolatChaud.jpg'
+        ]
+    ),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+    new Monster (),
+]

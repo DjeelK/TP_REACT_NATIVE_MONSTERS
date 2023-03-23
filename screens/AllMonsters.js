@@ -1,12 +1,18 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, Button, FlatList } from 'react-native'
 import React from 'react'
+import { PosterMonsters } from '../data/data'
+import CardGridTitle from '../components/CardGridTitle'
 
 export default function AllMonsters({navigation}) {
   return (
-    <View>
-      <Text>AllMonsters</Text>
-      <Button title='Go Details' onPress={() => navigation.navigate("DetailsMonsters")}/>
-    </View>
+    <FlatList data = {PosterMonsters}
+    keyExtractor={(item) => item.id}
+    renderItem={(itemData) => {
+      return(
+        <CardGridTitle title={itemData.item.title} onPress={() => navigation.navigate('DetailsMonsters')}/>
+      )
+    }}
+    numColumns={3}/>
   )
 }
 
