@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
         bottom : 55
     },
     image : {
-       flex : 1,
-       height : 100,
-       width : 100,
-       bottom : 10,
-       position : 'absolute',
-       borderRadius : 8
+        flex : 1,
+        height : 100,
+        width : 100,
+        bottom : 10,
+        position : 'absolute',
+        borderRadius : 8
     }
 })

@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-const MonsterItem = () => {
+export default function MonsterItem({image, title, description, crush }) {
   return (
-    <View>
-      <Text>MonsterItem</Text>
+    <View style={styles.monsterItem}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={image} />
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.description}>{description}</Text>
+        <Text style={styles.crush}>{crush}</Text>
+      </View>
     </View>
-  )
+  );
 }
 
-export default MonsterItem
+const styles = StyleSheet.create({});
