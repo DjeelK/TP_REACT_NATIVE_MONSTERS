@@ -11,7 +11,7 @@ export default function AllMonsters({navigation}) {
         <CardGridTitle 
         title={itemData.item.title}
         image={itemData.item.image} 
-        onPress={() => navigation.navigate('DetailsMonsters')}/>
+        onPress={() => navigation.navigate('DetailsMonsters', {monsterId: itemData.item.id})}/>
       )
     }}
     numColumns={3}/>

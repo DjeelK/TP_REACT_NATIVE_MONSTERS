@@ -2,8 +2,8 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-// import { store } from './store/store'
-// import { Provider } from 'react-redux'
+import { store } from './store/store'
+import { Provider } from 'react-redux'
 import AllMonsters from './screens/AllMonsters'
 import DetailsMonsters from './screens/DetailsMonsters'
 import HomeScreen from './screens/HomeScreen'
@@ -16,7 +16,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
   return (
-    // <Provider store = {store}>
+    <Provider store = {store}>
         <NavigationContainer>
             <Stack.Navigator initialRouteName="HomeScreen">
                 <Stack.Screen name ="HomeScreen" component={HomeScreen} options={{ headerShown: false }}/>
@@ -25,7 +25,7 @@ export default function App() {
                 <Stack.Screen name="MyMonsters" component={MyMonsters} options={{title: 'Mes monstres'}}/>
             </Stack.Navigator>
         </NavigationContainer>
-    // </Provider>
+    </Provider>
   )
 }
 
