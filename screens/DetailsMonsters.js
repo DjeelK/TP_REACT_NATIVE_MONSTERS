@@ -4,9 +4,9 @@ import MonsterItem from '../components/MonsterItem';
 import { Monsters } from '../data/data';
 
 
-export default function DetailsMonsters({ navigation, route }) {
+export default function DetailsMonsters({route}) {
   const monsterId = route.params.monsterId;
-  const myMonster = Monsters.find((Monster) => monsterId == monsterId);
+  const myMonster = Monsters.find((monster) => monster.id == monsterId);
   console.log(monsterId);
 
   return (
