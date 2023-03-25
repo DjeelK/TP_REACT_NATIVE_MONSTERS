@@ -7,7 +7,7 @@ import { Monsters } from '../data/data';
 export default function DetailsMonsters({route}) {
   const monsterId = route.params.monsterId;
   const myMonster = Monsters.find((monster) => monster.id == monsterId);
-  console.log(monsterId);
+  // console.log(monsterId);
 
   return (
     <FlatList
@@ -22,9 +22,9 @@ export default function DetailsMonsters({route}) {
           crush: item.crush,
         };
         return <MonsterItem {...monsterProps} />;
-        
       }}
     />
+    
   );
 }
 

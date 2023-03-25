@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import ButtonFav from './ButtonFav';
 
 export default function MonsterItem({image, title, description, crush }) {
   return (
@@ -10,6 +11,10 @@ export default function MonsterItem({image, title, description, crush }) {
         <Text style={styles.description}>{description}</Text>
         <Text style={styles.crush}>{crush}</Text>
       </View>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}> Your monsters (´･ω･`) </Text>
+      </TouchableOpacity>
+      <ButtonFav/>
     </View>
   );
 }
@@ -32,21 +37,16 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  cardContainer: {
-    borderWidth: 1,
-    borderColor: 'black',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
-  imageContainer: {
+  container: {
     flex: 1,
-    marginBottom: 10,
-    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     width: '100%',
     height: 300,
     borderRadius: 10,
+    bottom : 100,
   },
   title: {
     fontSize: 22,
@@ -55,18 +55,35 @@ const styles = StyleSheet.create({
     color: '#4A4A4A',
     textAlign: 'center',
     textTransform: 'uppercase',
-    top : 20,
+    bottom : 450
   },
   description: {
     fontSize: 15,
     color: '#4A4A4A',
     textAlign: 'center',
-    top : 30,
+    bottom : 100
   },
   crush: {
     fontSize: 15,
     color: '#F95FBE',
     textAlign: 'center',
-    top:70,
+    bottom : 80
+  },
+  button: {
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderColor: '#F95FBE',
+    borderRadius: 20,
+    padding: 10,
+    width: '50%',
+    alignSelf: 'center',
+    position: 'absolute',
+    bottom: 50,
+  },
+  buttonText: {
+    color: '#F95FBE',
+    textAlign: 'center',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });

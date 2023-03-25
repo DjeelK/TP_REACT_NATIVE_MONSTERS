@@ -21,7 +21,7 @@ export default function App() {
             <Stack.Navigator initialRouteName="HomeScreen">
                 <Stack.Screen name ="HomeScreen" component={HomeScreen} options={{ headerShown: false }}/>
                 <Stack.Screen name="AllMonsters" component={AllMonsters} options={{title: 'Famille de monstres'}}/>
-                <Stack.Screen name="DetailsMonsters" component={DetailsMonsters} options={{title: 'Le monstre'}}/>
+                <Stack.Screen name="DetailsMonsters" component={DetailsMonsters} options={{title: 'Le monstrosor'}}/>
                 <Stack.Screen name="MyMonsters" component={MyMonsters} options={{title: 'Mes monstres'}}/>
             </Stack.Navigator>
         </NavigationContainer>
