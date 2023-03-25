@@ -1,35 +1,36 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import ButtonFav from './ButtonFav';
-import { useNavigation } from '@react-navigation/native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-export default function MonsterItem({id,image, title, description, crush}) {
+export default function MonsterItem({id, image, title, description, crush}) {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.monsterItem}>
-      <View style={styles.container}>
-        <Image style={styles.image} source={image} />
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.description}>{description}</Text>
-        <Text style={styles.crush}>{crush}</Text>
+    <View style={styles.monsterStyle}>
+      <View style={styles.containerMonster}>
+        <Image style={styles.imageMonster} source={image} />
+        <Text style={styles.titleMonster}>{title}</Text>
+        <Text style={styles.descriptionMonster}>{description}</Text>
+        <Text style={styles.crushMonster}>{crush}</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('MyMonsters')}>
+      <TouchableOpacity
+        style={styles.buttonNav}
+        onPress={() => navigation.navigate('MyMonsters')}>
         <Text style={styles.buttonText}> Your monsters (´･ω･`) </Text>
       </TouchableOpacity>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  monsterItem: {
-    flex : 1,
+export const styles = StyleSheet.create({
+  monsterStyle: {
+    flex: 1,
     backgroundColor: 'white',
     borderRadius: 10,
     margin: 30,
     padding: 10,
     overflow: 'hidden',
-    height : 730,
+    height: 730,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -39,39 +40,39 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  container: {
+  containerMonster: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  image: {
+  imageMonster: {
     width: '100%',
     height: 300,
     borderRadius: 10,
-    bottom : 100,
+    bottom: 100,
   },
-  title: {
+  titleMonster: {
     fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 10,
     color: '#4A4A4A',
     textAlign: 'center',
     textTransform: 'uppercase',
-    bottom : 450
+    bottom: 450,
   },
-  description: {
+  descriptionMonster: {
     fontSize: 15,
     color: '#4A4A4A',
     textAlign: 'center',
-    bottom : 100
+    bottom: 100,
   },
-  crush: {
+  crushMonster: {
     fontSize: 15,
     color: '#F95FBE',
     textAlign: 'center',
-    bottom : 80
+    bottom: 80,
   },
-  button: {
+  buttonNav: {
     backgroundColor: 'white',
     borderWidth: 1,
     borderColor: '#F95FBE',

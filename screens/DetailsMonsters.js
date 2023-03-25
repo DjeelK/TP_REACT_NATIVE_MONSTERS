@@ -1,30 +1,35 @@
-import React, { useLayoutEffect } from 'react';
-import { StyleSheet, FlatList, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
+import React, {useLayoutEffect} from 'react';
+import {StyleSheet, FlatList, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 import ButtonFav from '../components/ButtonFav';
 import MonsterItem from '../components/MonsterItem';
-import { Monsters } from '../data/data';
-import { addIds, removeIds } from '../store/favMonster';
+import {Monsters} from '../data/data';
+import {addIds, removeIds} from '../store/favMonster';
 
-export default function DetailsMonsters({ navigation, route }) {
+export default function DetailsMonsters({navigation, route}) {
   const monsterId = route.params.monsterId;
-  const myMonster = Monsters.find((monster) => monster.id == monsterId);
+  const myMonster = Monsters.find(monster => monster.id == monsterId);
   const dispatch = useDispatch();
-  const favoriteMonsters = useSelector((state) => state.favMonster.ids);
+  const favoriteMonsters = useSelector(state => state.favMonster.ids);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <ButtonFav isfav={favoriteMonsters.includes(monsterId)} onPress={addOrRemove} />;
+        return (
+          <ButtonFav
+            isfav={favoriteMonsters.includes(monsterId)}
+            onPress={addOrRemove}
+          />
+        );
       },
     });
   }, [navigation, favoriteMonsters, monsterId]);
 
   function addOrRemove() {
     dispatch(
-      favoriteMonsters.includes(monsterId) 
-        ? removeIds({ id: monsterId }) 
-        : addIds({ id: monsterId })
+      favoriteMonsters.includes(monsterId)
+        ? removeIds({id: monsterId})
+        : addIds({id: monsterId}),
     );
   }
 
@@ -37,11 +42,11 @@ export default function DetailsMonsters({ navigation, route }) {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{flex: 1}}>
       <FlatList
         data={[monsterProps]}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => {
+        keyExtractor={item => item.id}
+        renderItem={({item}) => {
           return <MonsterItem {...item} />;
         }}
       />
