@@ -1,8 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import ButtonFav from './ButtonFav';
+import { useNavigation } from '@react-navigation/native';
 
-export default function MonsterItem({image, title, description, crush }) {
+export default function MonsterItem({id,image, title, description, crush}) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.monsterItem}>
       <View style={styles.container}>
@@ -11,10 +14,10 @@ export default function MonsterItem({image, title, description, crush }) {
         <Text style={styles.description}>{description}</Text>
         <Text style={styles.crush}>{crush}</Text>
       </View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('MyMonsters')}>
         <Text style={styles.buttonText}> Your monsters (´･ω･`) </Text>
       </TouchableOpacity>
-      <ButtonFav/>
+      <ButtonFav monsterId={id} />
     </View>
   );
 }
