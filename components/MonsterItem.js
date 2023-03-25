@@ -17,7 +17,6 @@ export default function MonsterItem({id,image, title, description, crush}) {
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('MyMonsters')}>
         <Text style={styles.buttonText}> Your monsters (´･ω･`) </Text>
       </TouchableOpacity>
-      <ButtonFav monsterId={id} />
     </View>
   );
 }
